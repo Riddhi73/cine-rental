@@ -1,44 +1,44 @@
+import logo from "./assets/logo.svg";
+import ringIcon from "./assets/ring.svg";
+import moonIcon from "./assets/icons/moon.svg";
+import cartIcon from "./assets/shopping-cart.svg";
+
 const Header = () => {
   return (
     <header>
-      <nav class="container flex items-center justify-between space-x-10 py-6">
-        <a href="index.html">
-          <img src="./assets/logo.svg" width="139" height="26" alt="" />
+      <nav className="container flex items-center justify-between space-x-10 py-6">
+        <a href="/">
+          <img src={logo} width="139" height="26" alt="Cine Rental" />
         </a>
 
-        <ul class="flex items-center space-x-5">
+        <ul className="flex items-center space-x-5">
           <li>
             <a
-              class="bg-primary/20 dark:bg-primary/7 rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              className="bg-primary/20 dark:bg-primary/10 rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img src="./assets/ring.svg" width="24" height="24" alt="" />
+              <img src={ringIcon} width="24" height="24" alt="Notifications" />
             </a>
           </li>
           <li>
             <a
-              class="bg-primary/20 dark:bg-primary/7 rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              className="bg-primary/20 dark:bg-primary/10 rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
               <img
-                src="./assets/icons/moon.svg"
+                src={moonIcon}
                 width="24"
                 height="24"
-                alt=""
+                alt="Toggle dark mode"
               />
             </a>
           </li>
           <li>
             <a
-              class="bg-primary/20 dark:bg-primary/7 rounded-lg backdrop-blur-[2px] p-1 inline-block"
+              className="bg-primary/20 dark:bg-primary/10 rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
             >
-              <img
-                src="./assets/shopping-cart.svg"
-                width="24"
-                height="24"
-                alt=""
-              />
+              <img src={cartIcon} width="24" height="24" alt="Shopping cart" />
             </a>
           </li>
         </ul>

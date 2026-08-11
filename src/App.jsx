@@ -1,8 +1,16 @@
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-amber-400">Cine Rental</h1>
-    </div>
+    <>
+      <Header />
+      <main>
+        <div className="container grid lg:grid-cols-[218px_1fr] gap-14">
+          <Sidebar />
+        </div>
+      </main>
+    </>
   );
 }
 
