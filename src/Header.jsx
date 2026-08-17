@@ -2,10 +2,17 @@ import logo from "./assets/logo.svg";
 import ringIcon from "./assets/ring.svg";
 import moonIcon from "./assets/icons/moon.svg";
 import cartIcon from "./assets/shopping-cart.svg";
+import { useState } from "react";
+import CartDetails from "./cine/CartDetails";
 
 const Header = () => {
+  const [showCart, setShowCart] = useState(false);
+  function handleCartShow() {
+    setShowCart(true);
+  }
   return (
     <header>
+      {showCart && <CartDetails onClose={() => setShowCart(false)} />}
       <nav className="container flex items-center justify-between space-x-10 py-6">
         <a href="/">
           <img src={logo} width="139" height="26" alt="Cine Rental" />
@@ -37,6 +44,7 @@ const Header = () => {
             <a
               className="bg-primary/20 dark:bg-primary/10 rounded-lg backdrop-blur-[2px] p-1 inline-block"
               href="#"
+              onClick={handleCartShow}
             >
               <img src={cartIcon} width="24" height="24" alt="Shopping cart" />
             </a>
